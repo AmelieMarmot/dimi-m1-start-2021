@@ -13,7 +13,7 @@ const getRandomClassName = () => {
 }
 
 const getRandomEmoji = () => {
-  let tab = ['🌚', '🌝', '🌗', '🌘'] 
+  let tab = ['🌚', '🌝', '🪐', '💫'] 
   const randomEmoji = tab[Math.floor(Math.random() * tab.length)];
   return randomEmoji
 }
