@@ -22,8 +22,10 @@ body {
 main#grid {
   width: calc(var(--grid-col)*var(--tile-size));
   height: calc(var(--grid-col)*var(--tile-size));
-  border: solid red 12px;
+  border: solid black 2px;
+  box-sizing: content-box;
 }
+
 div.tile {
   width: var(--tile-size);
   height: var(--tile-size);
