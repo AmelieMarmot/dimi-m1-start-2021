@@ -1,8 +1,17 @@
 
+const createType1 = () => {
+  const source = document.querySelector('#library .type1')
+  const clone = source.cloneNode(true)
+  return clone 
+}
+
 const createTile = () => {
   const div = document.createElement('div')
   div.className = 'tile'
   document.querySelector('main').append(div)
+
+  div.append(createType1())
+
   return div
 }
 
