@@ -1,4 +1,12 @@
 
+const getRandomColor = () => {
+  const r = Math.random()
+  if (r < 0.5) {
+    return 'red'
+  }
+  return 'blue'
+}
+
 const createType1 = () => {
   const source = document.querySelector('#library .type1')
   const clone = source.cloneNode(true)
