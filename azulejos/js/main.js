@@ -2,15 +2,28 @@
 const getRandomColor = () => {
   const r = Math.random()
   if (r < 0.5) {
-    return 'red'
+    if (Math.random() < 0.5) {
+      return '#D8BFD8'
+    }
+    return '#DDA0DD'
   }
-  return 'blue'
+  if (r < 0.7) {
+    return '#E6E6FA'
+  }
+  if (r < 0.9) {
+    return '#4B0082'
+  }
+  return '#9370DB'
 }
 
 const createType1 = () => {
   const source = document.querySelector('#library .type1')
   const clone = source.cloneNode(true)
-  return clone 
+  clone.style.backgroundColor = getRandomColor()
+  clone.querySelector('.layer1').style.backgroundColor = getRandomColor()
+  clone.querySelector('.layer2').style.backgroundColor = getRandomColor()
+  clone.querySelector('.layer3').style.backgroundColor = getRandomColor()
+  return clone
 }
 
 const createTile = () => {
