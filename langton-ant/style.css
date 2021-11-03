@@ -7,34 +7,31 @@ body, body * {
 }
 
 body {
-  padding: 64px;
   height: 100vh;
+  padding: 64px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  background-color: #ddd;
-  font-family:'Noto Serif', serif;
   align-items: center;
-}
-
-canvas {
-  background-color: #fff;
+  background-color: #ddd;
+  font-family: 'Noto Serif', serif;
 }
 
 #canvas-wrapper {
+  /* étendre ("grow") le contenu à sa "taille maximale" */
+  flex-grow: 1;
   margin: 16px;
-  flex: 1;
-  align-self: stretch;
-  display: flex;
-  justify-content: center;
 }
+
 #canvas-wrapper canvas {
-  image-rendering: pixelated;
   height: 100%;
+  background-color: #fff;
 }
+
 #canvas-wrapper img {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 10px;
   height: 10px;
-  opacity: .75;
 }
