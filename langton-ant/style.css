@@ -1,39 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
-body, body * {
-  margin: 0;
-  box-sizing: border-box;
-  position: relative;
-}
+@import url(../../common/style.css);
 
 body {
-  height: 100vh;
   padding: 64px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #ddd;
-  font-family: 'Noto Serif', serif;
 }
 
-#canvas-wrapper {
-  /* étendre ("grow") le contenu à la "taille maximale disponible" */
-  flex-grow: 1;
-  margin: 16px;
-  align-self: center;
+header {
+  text-align: center;
 }
 
-#canvas-wrapper canvas {
-  height: 100%;
-  background-color: #fff;
+canvas {
+  flex: 1;
+  margin: 32px;
   image-rendering: pixelated;
 }
 
-#canvas-wrapper img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 10px;
-  height: 10px;
+footer {
+  display: flex;
+  align-items: center;
+}
+footer > * + * {
+  margin-left: 8px;
+}
+footer button {
+  padding: 4px;
 }

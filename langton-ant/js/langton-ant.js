@@ -1,4 +1,4 @@
-import { getPixel, setPixel } from './utils/canvas.js'
+import { getPixel, setPixel } from '../../../common/canvas.js'
 
 const RIGHT = 0
 const BOTTOM = 1
@@ -57,9 +57,16 @@ const move = () => {
   moveForward()
 }
 
+const setPosition = (positionX, positionY) => {
+  x = positionX
+  y = positionY
+}
+
 export {
   x,
   y,
   orientation,
   move,
+  setPosition,
 }
+

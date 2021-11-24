@@ -1,39 +1,23 @@
-<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fourmi de Langton</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <link rel="stylesheet" href="style.css">
+  </head>
 
-  <h1>Fourmi de Langton</h1>
+  <body class="flex-column-center">
+    <header>
+      <h1>Fourmi de Langton</h1>
+      <p>Et autres automates cellulaires.</p>
+    </header>
 
-  <ul>
-    <li>
-      <a href="https://fr.wikipedia.org/wiki/Fourmi_de_Langton">
-        Wikipédia
-      </a>
-    </li>
-    <li>
-      <a href="https://www.youtube.com/watch?v=qZRYGxF6D3w&t=168s&ab_channel=ScienceEtonnante">
-        Youtube
-      </a>
-    </li>
-  </ul>
-
-  <div id="canvas-wrapper">
     <canvas></canvas>
-    <img id="ant" src="./assets/ant.svg" alt="">
-  </div>
 
-  <footer>
-    <button id="move">move</button>
-    <button id="play-pause">play / pause</button>
-  </footer>
-  
-  <!-- type="module" -> offre la possibilité d'utiliser le javascript "moderne" -->
-  <script src="js/main.js" type="module"></script>
-</body>
+    <footer>
+      <button id="update">Update</button>
+      <button id="play-pause">Play / Pause</button>
+      <input id="speed" type="range" value="1" min="1" max="64">
+      <span id="frame">#0</span>
+    </footer>
+
+    <script src="js/main.js" type="module"></script>
+  </body>
 </html>
